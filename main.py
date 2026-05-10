@@ -86,7 +86,7 @@ def chat(request: ChatRequest):
 
     # ----------- STEP 3: ASK CLARIFICATION -----------
 
-    if info_count < 3:
+    if info_count < 2:
         return {
             "reply": "Can you specify the role, required skills, and experience level?",
             "recommendations": [],
