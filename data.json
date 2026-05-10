@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Java 8 (New)",
+    "description": "Test for Java programming skills including OOP and problem solving",
+    "skills": ["java", "programming", "coding"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/java-8-new/",
+    "test_type": "K"
+  },
+  {
+    "name": "OPQ32r",
+    "description": "Personality assessment to understand workplace behavior",
+    "skills": ["personality", "behavior"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/opq32r/",
+    "test_type": "P"
+  },
+  {
+    "name": "Verify G+ General Ability",
+    "description": "Measures general cognitive ability and reasoning",
+    "skills": ["aptitude", "reasoning", "cognitive"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/verify-g-plus/",
+    "test_type": "A"
+  }
+]
