@@ -1,58 +1,170 @@
 [
   {
     "name": "Java 8 (New)",
-    "description": "Test for Java programming skills including OOP and problem solving",
+    "description": "Test for Java programming including OOP and problem solving",
     "skills": ["java", "programming", "coding"],
     "url": "https://www.shl.com/solutions/products/product-catalog/view/java-8-new/",
     "test_type": "K"
   },
   {
     "name": "Python (New)",
-    "description": "Assessment for Python programming including data structures and logic",
+    "description": "Assessment for Python programming and logic building",
     "skills": ["python", "programming", "coding"],
     "url": "https://www.shl.com/solutions/products/product-catalog/view/python-new/",
     "test_type": "K"
   },
   {
     "name": "SQL (New)",
-    "description": "Measures SQL querying, database understanding and data manipulation",
+    "description": "Test for SQL querying and database management",
     "skills": ["sql", "database", "data"],
     "url": "https://www.shl.com/solutions/products/product-catalog/view/sql-new/",
     "test_type": "K"
   },
   {
+    "name": "C# Programming",
+    "description": "Assessment for C# development and .NET fundamentals",
+    "skills": ["c#", "programming"],
+    "url": "https://www.shl.com",
+    "test_type": "K"
+  },
+  {
+    "name": "JavaScript (New)",
+    "description": "Test for JavaScript fundamentals and web development",
+    "skills": ["javascript", "web", "frontend"],
+    "url": "https://www.shl.com",
+    "test_type": "K"
+  },
+  {
+    "name": "Data Interpretation",
+    "description": "Measures ability to interpret data and charts",
+    "skills": ["data", "analysis"],
+    "url": "https://www.shl.com",
+    "test_type": "A"
+  },
+  {
+    "name": "Numerical Reasoning",
+    "description": "Assesses ability to work with numbers",
+    "skills": ["numerical", "math", "data"],
+    "url": "https://www.shl.com",
+    "test_type": "A"
+  },
+  {
+    "name": "Verbal Reasoning",
+    "description": "Evaluates reading and comprehension skills",
+    "skills": ["verbal", "reading"],
+    "url": "https://www.shl.com",
+    "test_type": "A"
+  },
+  {
+    "name": "Logical Reasoning",
+    "description": "Measures logical thinking ability",
+    "skills": ["logic", "reasoning"],
+    "url": "https://www.shl.com",
+    "test_type": "A"
+  },
+  {
+    "name": "Inductive Reasoning",
+    "description": "Evaluates pattern recognition and abstract thinking",
+    "skills": ["pattern", "logic"],
+    "url": "https://www.shl.com",
+    "test_type": "A"
+  },
+  {
     "name": "OPQ32r",
-    "description": "Personality assessment to understand workplace behavior",
+    "description": "Personality assessment for workplace behavior",
     "skills": ["personality", "behavior"],
     "url": "https://www.shl.com/solutions/products/product-catalog/view/opq32r/",
     "test_type": "P"
   },
   {
-    "name": "Verify G+ General Ability",
-    "description": "Measures general cognitive ability and reasoning",
-    "skills": ["aptitude", "reasoning", "cognitive"],
-    "url": "https://www.shl.com/solutions/products/product-catalog/view/verify-g-plus/",
-    "test_type": "A"
-  },
-  {
-    "name": "Numerical Reasoning",
-    "description": "Assesses ability to work with numbers and data interpretation",
-    "skills": ["numerical", "math", "data"],
-    "url": "https://www.shl.com/solutions/products/product-catalog/view/numerical-reasoning/",
-    "test_type": "A"
-  },
-  {
-    "name": "Verbal Reasoning",
-    "description": "Evaluates comprehension and verbal logic",
-    "skills": ["verbal", "reading", "comprehension"],
-    "url": "https://www.shl.com/solutions/products/product-catalog/view/verbal-reasoning/",
-    "test_type": "A"
+    "name": "Motivation Questionnaire (MQ)",
+    "description": "Measures candidate motivation drivers",
+    "skills": ["motivation", "behavior"],
+    "url": "https://www.shl.com",
+    "test_type": "P"
   },
   {
     "name": "Situational Judgement Test",
     "description": "Measures decision making in workplace scenarios",
-    "skills": ["decision", "judgement", "behavior"],
-    "url": "https://www.shl.com/solutions/products/product-catalog/view/situational-judgement/",
+    "skills": ["decision", "judgement"],
+    "url": "https://www.shl.com",
     "test_type": "P"
+  },
+  {
+    "name": "Leadership Assessment",
+    "description": "Evaluates leadership potential",
+    "skills": ["leadership", "management"],
+    "url": "https://www.shl.com",
+    "test_type": "P"
+  },
+  {
+    "name": "Teamwork Assessment",
+    "description": "Measures collaboration and teamwork skills",
+    "skills": ["teamwork", "collaboration"],
+    "url": "https://www.shl.com",
+    "test_type": "P"
+  },
+  {
+    "name": "Communication Skills Test",
+    "description": "Evaluates verbal and written communication",
+    "skills": ["communication"],
+    "url": "https://www.shl.com",
+    "test_type": "P"
+  },
+  {
+    "name": "Verify G+ General Ability",
+    "description": "Measures cognitive ability and reasoning",
+    "skills": ["aptitude", "reasoning"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/verify-g-plus/",
+    "test_type": "A"
+  },
+  {
+    "name": "Problem Solving Test",
+    "description": "Evaluates analytical problem solving skills",
+    "skills": ["problem", "analysis"],
+    "url": "https://www.shl.com",
+    "test_type": "A"
+  },
+  {
+    "name": "Critical Thinking Test",
+    "description": "Measures reasoning and evaluation skills",
+    "skills": ["critical", "thinking"],
+    "url": "https://www.shl.com",
+    "test_type": "A"
+  },
+  {
+    "name": "Attention to Detail",
+    "description": "Assesses accuracy and detail orientation",
+    "skills": ["detail", "accuracy"],
+    "url": "https://www.shl.com",
+    "test_type": "A"
+  },
+  {
+    "name": "Project Management Test",
+    "description": "Measures project planning and execution skills",
+    "skills": ["project", "management"],
+    "url": "https://www.shl.com",
+    "test_type": "K"
+  },
+  {
+    "name": "Business Analyst Test",
+    "description": "Evaluates business analysis and requirement skills",
+    "skills": ["business", "analysis"],
+    "url": "https://www.shl.com",
+    "test_type": "K"
+  },
+  {
+    "name": "Data Analyst Test",
+    "description": "Measures data analysis and reporting skills",
+    "skills": ["data", "analysis", "sql"],
+    "url": "https://www.shl.com",
+    "test_type": "K"
+  },
+  {
+    "name": "Software Testing Test",
+    "description": "Evaluates QA and testing skills",
+    "skills": ["testing", "qa"],
+    "url": "https://www.shl.com",
+    "test_type": "K"
   }
 ]
