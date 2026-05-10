@@ -39,20 +39,25 @@ def home():
 
 @app.post("/chat")
 def chat(request: ChatRequest):
-    
-    # Combine all user messages
-    full_text = " ".join(
-        [m.content.lower() for m in request.messages if m.role == "user"]
-    )
 
-    # ----------- OUT OF SCOPE -----------
+    # ✅ USE ONLY LATEST USER MESSAGE (FIXED)
+    user_messages = [m.content.lower() for m in request.messages if m.role == "user"]
+    full_text = user_messages[-1] if user_messages else ""
+
+    # ----------- OUT OF SCOPE (FIXED) -----------
 
     out_of_scope_keywords = [
         "diet", "workout", "recipe", "movie", "weather",
-        "legal", "salary", "relationship", "politics"
+        "relationship", "politics"
     ]
 
-    if any(word in full_text for word in out_of_scope_keywords):
+    is_out_of_scope = any(word in full_text for word in out_of_scope_keywords)
+
+    is_hiring_context = any(word in full_text for word in [
+        "developer", "engineer", "analyst", "java", "python", "sql"
+    ])
+
+    if is_out_of_scope and not is_hiring_context:
         return {
             "reply": "I can only help with SHL assessments. Please ask about hiring assessments.",
             "recommendations": [],
@@ -95,7 +100,7 @@ def chat(request: ChatRequest):
 
     info_count = sum([has_skill, has_role, has_level])
 
-    # ----------- ASK -----------
+    # ----------- ASK CLARIFICATION -----------
 
     if info_count < 2:
         return {
