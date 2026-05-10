@@ -7,6 +7,20 @@
     "test_type": "K"
   },
   {
+    "name": "Python (New)",
+    "description": "Assessment for Python programming including data structures and logic",
+    "skills": ["python", "programming", "coding"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/python-new/",
+    "test_type": "K"
+  },
+  {
+    "name": "SQL (New)",
+    "description": "Measures SQL querying, database understanding and data manipulation",
+    "skills": ["sql", "database", "data"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/sql-new/",
+    "test_type": "K"
+  },
+  {
     "name": "OPQ32r",
     "description": "Personality assessment to understand workplace behavior",
     "skills": ["personality", "behavior"],
@@ -19,5 +33,26 @@
     "skills": ["aptitude", "reasoning", "cognitive"],
     "url": "https://www.shl.com/solutions/products/product-catalog/view/verify-g-plus/",
     "test_type": "A"
+  },
+  {
+    "name": "Numerical Reasoning",
+    "description": "Assesses ability to work with numbers and data interpretation",
+    "skills": ["numerical", "math", "data"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/numerical-reasoning/",
+    "test_type": "A"
+  },
+  {
+    "name": "Verbal Reasoning",
+    "description": "Evaluates comprehension and verbal logic",
+    "skills": ["verbal", "reading", "comprehension"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/verbal-reasoning/",
+    "test_type": "A"
+  },
+  {
+    "name": "Situational Judgement Test",
+    "description": "Measures decision making in workplace scenarios",
+    "skills": ["decision", "judgement", "behavior"],
+    "url": "https://www.shl.com/solutions/products/product-catalog/view/situational-judgement/",
+    "test_type": "P"
   }
 ]
