@@ -2,6 +2,7 @@ import json
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
@@ -26,15 +27,25 @@ def health():
     return {"status": "ok"}
 
 
+# ----------- UI ROUTE -----------
+
+@app.get("/", response_class=HTMLResponse)
+def home():
+    with open("index.html", "r") as f:
+        return f.read()
+
+
+# ----------- CHATBOT -----------
+
 @app.post("/chat")
 def chat(request: ChatRequest):
     
-    # Combine all user messages (important for stateless API)
+    # Combine all user messages
     full_text = " ".join(
         [m.content.lower() for m in request.messages if m.role == "user"]
     )
 
-    # ----------- STEP 0: OUT-OF-SCOPE HANDLING -----------
+    # ----------- OUT OF SCOPE -----------
 
     out_of_scope_keywords = [
         "diet", "workout", "recipe", "movie", "weather",
@@ -48,7 +59,7 @@ def chat(request: ChatRequest):
             "end_of_conversation": False
         }
 
-    # ----------- STEP 1: COMPARISON -----------
+    # ----------- COMPARISON -----------
 
     if "difference" in full_text or "compare" in full_text:
         found = []
@@ -73,7 +84,7 @@ def chat(request: ChatRequest):
                 "end_of_conversation": False
             }
 
-    # ----------- STEP 2: DETECT INFO -----------
+    # ----------- DETECT INFO -----------
 
     has_skill = any(word in full_text for word in ["java", "python", "sql"])
     has_role = any(word in full_text for word in ["developer", "engineer", "analyst"])
@@ -84,7 +95,7 @@ def chat(request: ChatRequest):
 
     info_count = sum([has_skill, has_role, has_level])
 
-    # ----------- STEP 3: ASK CLARIFICATION -----------
+    # ----------- ASK -----------
 
     if info_count < 2:
         return {
@@ -93,7 +104,7 @@ def chat(request: ChatRequest):
             "end_of_conversation": False
         }
 
-    # ----------- STEP 4: RECOMMEND -----------
+    # ----------- RECOMMEND -----------
 
     matched = []
 
@@ -101,7 +112,6 @@ def chat(request: ChatRequest):
 
         skill_match = any(skill in full_text for skill in item["skills"])
 
-        # Apply refinement filters
         if wants_personality and item["test_type"] != "P":
             continue
 
@@ -111,8 +121,7 @@ def chat(request: ChatRequest):
         if skill_match:
             matched.append(item)
 
-    # ----------- Fallback (if no match found) -----------
-
+    # fallback
     if not matched:
         for item in catalog:
             if wants_personality and item["test_type"] == "P":
